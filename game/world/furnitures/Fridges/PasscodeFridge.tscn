@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxpltkqabxhs"]
+
+[ext_resource type="PackedScene" uid="uid://bmf7lv6njlc24" path="res://game/world/furnitures/Fridges/Fridge.tscn" id="1_ospbi"]
+[ext_resource type="SpriteFrames" uid="uid://bbwgiey8yda2y" path="res://game/world/furnitures/sprite_frames/fridge_door_lock_sprite_frames.tres" id="2_jsfhi"]
+
+[node name="Fridge" instance=ExtResource("1_ospbi")]
+
+[node name="Door" parent="." index="1"]
+sprite_frames = ExtResource("2_jsfhi")
+has_lock = true
+
+[node name="LockComponent" parent="Door" index="3"]
+passcode = "246780"

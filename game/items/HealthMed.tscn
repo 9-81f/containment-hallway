@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl0p3p1ilmmhq"]
+
+[ext_resource type="PackedScene" uid="uid://333vfxm54tsf" path="res://game/items/base/Consumable.tscn" id="1_8j76y"]
+[ext_resource type="Texture2D" uid="uid://bsh5knohqyifw" path="res://assets/spritesheets/furnitures/furnish.png" id="2_lqwv2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8j76y"]
+atlas = ExtResource("2_lqwv2")
+region = Rect2(5, 27, 2, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqwv2"]
+atlas = ExtResource("2_lqwv2")
+region = Rect2(4, 26, 4, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr8e6"]
+size = Vector2(2, 8)
+
+[node name="HealthMedicine" instance=ExtResource("1_8j76y")]
+icon = SubResource("AtlasTexture_8j76y")
+item_name = "Health Medicine"
+description = "Restore 10 pts. of health"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_lqwv2")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_wr8e6")

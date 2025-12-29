@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv6yaslpesf8u"]
+
+[ext_resource type="PackedScene" uid="uid://dndvs46q7ebf6" path="res://game/items/base/Weapon.tscn" id="1_7lnl4"]
+[ext_resource type="PackedScene" uid="uid://dkikj2f0yih5e" path="res://game/items/equips/BaseballBatEquip.tscn" id="2_m04y3"]
+[ext_resource type="Texture2D" uid="uid://bblfaif6vedqa" path="res://assets/spritesheets/weapons/weapons.png" id="2_onw0m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m04y3"]
+atlas = ExtResource("2_onw0m")
+region = Rect2(29, 11, 3, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8ndl"]
+atlas = ExtResource("2_onw0m")
+region = Rect2(5, 10, 22, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asaab"]
+size = Vector2(20, 6)
+
+[node name="BaseballBatPickup" instance=ExtResource("1_7lnl4")]
+damage = 5
+equip_scene = ExtResource("2_m04y3")
+icon = SubResource("AtlasTexture_m04y3")
+item_name = "Baseball Bat"
+description = "A metal baseball bat. Can be used for self-defense."
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_i8ndl")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_asaab")

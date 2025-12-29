@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl8r2toujp044"]
+
+[ext_resource type="SpriteFrames" uid="uid://cnkblon508c4p" path="res://game/world/furnitures/sprite_frames/door_sprite_frames.tres" id="1_5yy5n"]
+[ext_resource type="Script" uid="uid://d0oxd512thb4a" path="res://game/world/furnitures/door.gd" id="2_31opo"]
+[ext_resource type="SpriteFrames" uid="uid://cxubwe11t4blb" path="res://game/world/furnitures/sprite_frames/fridge_door_sprite_frames.tres" id="3_31opo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yy5n"]
+size = Vector2(32, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31opo"]
+size = Vector2(32, 25)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("2_31opo")
+sprite_frames = ExtResource("1_5yy5n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 8)
+sprite_frames = ExtResource("3_31opo")
+animation = &"open"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 30)
+shape = SubResource("RectangleShape2D_5yy5n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 12.5)
+shape = SubResource("RectangleShape2D_31opo")
+debug_color = Color(1, 0.6313726, 0, 0.41960785)
+
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

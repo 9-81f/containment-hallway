@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhtb3vl0sl3rv"]
+
+[ext_resource type="Script" uid="uid://w6rk10nk2t7r" path="res://ui/debug overlay/debug_overlay.gd" id="1_f8jne"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8jne"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.7058824)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="DebugOverlay" type="CanvasLayer"]
+script = ExtResource("1_f8jne")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f8jne")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2

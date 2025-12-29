@@ -1,0 +1,123 @@
+[gd_scene load_steps=19 format=3 uid="uid://bmf7lv6njlc24"]
+
+[ext_resource type="Script" uid="uid://bjqeeowrb54dc" path="res://game/world/furnitures/Fridges/fridge.gd" id="1_au5cl"]
+[ext_resource type="Texture2D" uid="uid://bsh5knohqyifw" path="res://assets/spritesheets/furnitures/furnish.png" id="2_2ovi5"]
+[ext_resource type="PackedScene" uid="uid://dl0p3p1ilmmhq" path="res://game/items/HealthMed.tscn" id="2_rs0bi"]
+[ext_resource type="PackedScene" uid="uid://b27c0rdowly4i" path="res://game/items/LesserHealthMed.tscn" id="3_e4ol5"]
+[ext_resource type="PackedScene" uid="uid://dk4f7kqu4mpq5" path="res://game/world/furnitures/FridgeDoor.tscn" id="5_ht850"]
+[ext_resource type="Texture2D" uid="uid://blqj3q18sovue" path="res://assets/spritesheets/furnitures/fridge02-door.png" id="6_a428r"]
+[ext_resource type="PackedScene" uid="uid://db41vrsfobrtg" path="res://game/components/LockComponent.tscn" id="6_movld"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8c8l"]
+atlas = ExtResource("2_2ovi5")
+region = Rect2(76, 15, 34, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txski"]
+atlas = ExtResource("6_a428r")
+region = Rect2(0, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwrmj"]
+atlas = ExtResource("6_a428r")
+region = Rect2(66, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxprs"]
+atlas = ExtResource("6_a428r")
+region = Rect2(132, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_telp8"]
+atlas = ExtResource("6_a428r")
+region = Rect2(198, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn2yb"]
+atlas = ExtResource("6_a428r")
+region = Rect2(264, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m8bj"]
+atlas = ExtResource("6_a428r")
+region = Rect2(330, 0, 66, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a428r"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txski")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwrmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxprs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_telp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn2yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m8bj")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_au5cl"]
+size = Vector2(24, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs0bi"]
+size = Vector2(24, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ovi5"]
+size = Vector2(32, 32)
+
+[node name="Fridge" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_au5cl")
+shelf_items = Array[PackedScene]([ExtResource("2_rs0bi"), ExtResource("3_e4ol5")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_u8c8l")
+
+[node name="Door" parent="." instance=ExtResource("5_ht850")]
+position = Vector2(0, 9)
+sprite_frames = SubResource("SpriteFrames_a428r")
+
+[node name="LockComponent" parent="Door" instance=ExtResource("6_movld")]
+
+[node name="ItemContainer" type="Node2D" parent="."]
+
+[node name="Shelf01" type="Area2D" parent="ItemContainer"]
+position = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemContainer/Shelf01"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_au5cl")
+
+[node name="Shelf02" type="Area2D" parent="ItemContainer"]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemContainer/Shelf02"]
+shape = SubResource("RectangleShape2D_au5cl")
+
+[node name="Shelf03" type="Area2D" parent="ItemContainer"]
+position = Vector2(0, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemContainer/Shelf03"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_au5cl")
+
+[node name="Shelf04" type="Area2D" parent="ItemContainer"]
+position = Vector2(0, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemContainer/Shelf04"]
+position = Vector2(0, -3.25)
+shape = SubResource("RectangleShape2D_rs0bi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 24)
+shape = SubResource("RectangleShape2D_2ovi5")
+debug_color = Color(0.9653657, 0, 0.4900598, 0.41960785)

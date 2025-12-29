@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dndvs46q7ebf6"]
+
+[ext_resource type="PackedScene" uid="uid://cs2sa7vyiqtcv" path="res://game/items/base/BaseItem.tscn" id="1_n75bx"]
+[ext_resource type="Script" uid="uid://1x4212j5oygi" path="res://game/items/scripts/weapon.gd" id="2_l8ynp"]
+
+[node name="Weapon" instance=ExtResource("1_n75bx")]
+script = ExtResource("2_l8ynp")
+damage = 1
+attack_speed = 200
+type = 1
+max_quantity = 5

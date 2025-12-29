@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfl6aecfkmk4a"]
+
+[ext_resource type="PackedScene" uid="uid://d3megv5xv2pyc" path="res://game/world/furnitures/Fridges/AccessCardFridge.tscn" id="1_dcgg1"]
+[ext_resource type="PackedScene" uid="uid://bmf7lv6njlc24" path="res://game/world/furnitures/Fridges/Fridge.tscn" id="2_vwnjh"]
+[ext_resource type="PackedScene" uid="uid://boxpltkqabxhs" path="res://game/world/furnitures/Fridges/PasscodeFridge.tscn" id="3_klcoi"]
+[ext_resource type="PackedScene" uid="uid://dcrwuloy213vr" path="res://game/world/furnitures/Desk.tscn" id="4_nfaxw"]
+[ext_resource type="PackedScene" uid="uid://bl365m8yf4a04" path="res://game/world/movables/Movable.tscn" id="5_ibunk"]
+[ext_resource type="PackedScene" uid="uid://bihueuap2oi8v" path="res://game/actors/player/Player.tscn" id="6_yg4as"]
+[ext_resource type="PackedScene" uid="uid://bc6vfjm11mm2" path="res://game/actors/enemy/Enemy.tscn" id="7_nddve"]
+
+[node name="Sandbox" type="Node2D"]
+y_sort_enabled = true
+
+[node name="AccessCardFridge" parent="." instance=ExtResource("1_dcgg1")]
+position = Vector2(264, 93)
+
+[node name="Fridge" parent="." instance=ExtResource("2_vwnjh")]
+position = Vector2(322, 93)
+
+[node name="PasscodeFridge" parent="." instance=ExtResource("3_klcoi")]
+position = Vector2(204, 93)
+
+[node name="Desk" parent="." instance=ExtResource("4_nfaxw")]
+y_sort_enabled = true
+position = Vector2(121, 95)
+
+[node name="BaseMovable" parent="." instance=ExtResource("5_ibunk")]
+position = Vector2(69.99999, 148.99998)
+
+[node name="Player" parent="." instance=ExtResource("6_yg4as")]
+position = Vector2(25, 98)
+
+[node name="Enemy" parent="." instance=ExtResource("7_nddve")]
+position = Vector2(341, 200)
+run_speed = 80.0
+
+[node name="Enemy2" parent="." instance=ExtResource("7_nddve")]
+position = Vector2(167, 299)

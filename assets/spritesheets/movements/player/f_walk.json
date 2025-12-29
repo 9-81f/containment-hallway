@@ -1,0 +1,91 @@
+{ "frames": {
+   "guy-001-fix #Walk 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 1.aseprite": {
+    "frame": { "x": 64, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 2.aseprite": {
+    "frame": { "x": 128, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 3.aseprite": {
+    "frame": { "x": 192, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 4.aseprite": {
+    "frame": { "x": 256, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 5.aseprite": {
+    "frame": { "x": 320, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 6.aseprite": {
+    "frame": { "x": 384, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   },
+   "guy-001-fix #Walk 7.aseprite": {
+    "frame": { "x": 448, "y": 0, "w": 64, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "f_walk.png",
+  "format": "RGBA8888",
+  "size": { "w": 512, "h": 64 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Idle", "from": 0, "to": 7, "direction": "forward", "color": "#000000ff" },
+   { "name": "Walk", "from": 8, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "Run", "from": 16, "to": 23, "direction": "forward", "color": "#000000ff" },
+   { "name": "Push", "from": 24, "to": 31, "direction": "forward", "color": "#000000ff" },
+   { "name": "Weapon-Idle", "from": 32, "to": 39, "direction": "forward", "color": "#fe5b59ff" },
+   { "name": "Weapon-Walk", "from": 40, "to": 47, "direction": "forward", "color": "#fe5b59ff" },
+   { "name": "Weapon-Run", "from": 48, "to": 55, "direction": "forward", "color": "#fe5b59ff" },
+   { "name": "Melee-Attack", "from": 56, "to": 62, "direction": "forward", "color": "#57b9f2ff" }
+  ],
+  "layers": [
+   { "name": "f_shadow", "opacity": 128, "blendMode": "normal" },
+   { "name": "front", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bmo7bfro3hthh"]
+
+[ext_resource type="FontFile" uid="uid://cyb20c7002u7m" path="res://assets/fonts/Kenney Mini.ttf" id="1_1c8oy"]
+[ext_resource type="StyleBox" uid="uid://d0p85v3b2mjwi" path="res://ui/themes/embossed_button_hover.tres" id="1_58e74"]
+[ext_resource type="StyleBox" uid="uid://cmm8l1korhu5h" path="res://ui/themes/base_embossed_button.tres" id="1_hfswh"]
+[ext_resource type="StyleBox" uid="uid://do4edxpv88cyt" path="res://ui/themes/embossed_button_pressed.tres" id="3_ykfty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58e74"]
+bg_color = Color(0.06053035, 0.060530342, 0.060530372, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykfty"]
+bg_color = Color(0.99999994, 0.26708767, 0.20711654, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1c8oy"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0, 0, 0, 0.5882353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfswh"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.7372549, 0.6666667, 0.6431373, 1)
+
+[resource]
+default_font = ExtResource("1_1c8oy")
+default_font_size = 10
+Bodycopy/base_type = &"Label"
+Bodycopy/font_sizes/font_size = 12
+EmbossedButton/base_type = &"Button"
+EmbossedButton/font_sizes/font_size = 16
+EmbossedButton/styles/focus = ExtResource("1_58e74")
+EmbossedButton/styles/hover = ExtResource("1_58e74")
+EmbossedButton/styles/hover_pressed = ExtResource("3_ykfty")
+EmbossedButton/styles/normal = ExtResource("1_hfswh")
+EmbossedButton/styles/pressed = ExtResource("3_ykfty")
+H1/base_type = &"Label"
+H1/font_sizes/font_size = 64
+H2/base_type = &"Label"
+H2/font_sizes/font_size = 48
+H3/base_type = &"Label"
+H3/font_sizes/font_size = 36
+HealthBar/base_type = &"ProgressBar"
+HealthBar/styles/background = SubResource("StyleBoxFlat_58e74")
+HealthBar/styles/fill = SubResource("StyleBoxFlat_ykfty")
+PaddingMDPanelContainer/base_type = &"PanelContainer"
+PaddingMDPanelContainer/styles/panel = SubResource("StyleBoxFlat_1c8oy")
+PaperPanelContainer/base_type = &"PanelContainer"
+PaperPanelContainer/styles/panel = SubResource("StyleBoxFlat_hfswh")

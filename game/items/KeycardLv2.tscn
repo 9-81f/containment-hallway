@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://defuum63k7lar"]
+
+[ext_resource type="PackedScene" uid="uid://bqggrny8lnyor" path="res://game/items/KeycardLv1.tscn" id="1_t0u8d"]
+[ext_resource type="Texture2D" uid="uid://bsh5knohqyifw" path="res://assets/spritesheets/furnitures/furnish.png" id="2_31kc6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31kc6"]
+atlas = ExtResource("2_31kc6")
+region = Rect2(10, 18, 5, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t3ab"]
+atlas = ExtResource("2_31kc6")
+region = Rect2(9, 17, 7, 6)
+
+[node name="KeycardLv2" instance=ExtResource("1_t0u8d")]
+access_level = 2
+icon = SubResource("AtlasTexture_31kc6")
+item_name = "Keycard Lv.2"
+description = "Keycard with access level 2 clearance"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_7t3ab")

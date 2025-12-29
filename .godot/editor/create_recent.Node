@@ -1,0 +1,14 @@
+AudioStreamPlayer2D
+Button
+Label
+VBoxContainer
+CenterContainer
+PanelContainer
+CanvasLayer
+CollisionShape2D
+Area2D
+Panel
+RichTextLabel
+CanvasModulate
+PointLight2D
+Node2D

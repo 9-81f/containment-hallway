@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cnkblon508c4p"]
+
+[ext_resource type="Texture2D" uid="uid://b2ghe4rwygkc8" path="res://assets/spritesheets/furnitures/hallway-door.png" id="1_mwjnu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_875do"]
+atlas = ExtResource("1_mwjnu")
+region = Rect2(0, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0p84"]
+atlas = ExtResource("1_mwjnu")
+region = Rect2(66, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl78a"]
+atlas = ExtResource("1_mwjnu")
+region = Rect2(132, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idbod"]
+atlas = ExtResource("1_mwjnu")
+region = Rect2(198, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmgr5"]
+atlas = ExtResource("1_mwjnu")
+region = Rect2(264, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5nc2"]
+atlas = ExtResource("1_mwjnu")
+region = Rect2(330, 0, 66, 66)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"close",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_875do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0p84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl78a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idbod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmgr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5nc2")
+}],
+"loop": false,
+"name": &"open",
+"speed": 6.0
+}]

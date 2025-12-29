@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://333vfxm54tsf"]
+
+[ext_resource type="PackedScene" uid="uid://cs2sa7vyiqtcv" path="res://game/items/base/BaseItem.tscn" id="1_vuhuu"]
+[ext_resource type="Script" uid="uid://bob5g2i586p8i" path="res://game/items/scripts/consumable.gd" id="2_s83pc"]
+
+[node name="Consumable" instance=ExtResource("1_vuhuu")]
+script = ExtResource("2_s83pc")
+consumption_value = 10
+status = 0

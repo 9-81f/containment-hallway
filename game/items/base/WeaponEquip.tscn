@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://p7170skxp2e3"]
+
+[ext_resource type="Script" uid="uid://cwwbcv15nvnqo" path="res://game/items/scripts/weapon_equip.gd" id="1_dwkwd"]
+
+[node name="WeaponEquip" type="Node2D"]
+script = ExtResource("1_dwkwd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+
+[node name="SwingAudio" type="AudioStreamPlayer2D" parent="."]

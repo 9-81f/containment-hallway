@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk4f7kqu4mpq5"]
+
+[ext_resource type="PackedScene" uid="uid://dl8r2toujp044" path="res://game/world/furnitures/Door.tscn" id="1_bwe1m"]
+[ext_resource type="SpriteFrames" uid="uid://cxubwe11t4blb" path="res://game/world/furnitures/sprite_frames/fridge_door_sprite_frames.tres" id="2_asptl"]
+
+[node name="Door" instance=ExtResource("1_bwe1m")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_asptl")

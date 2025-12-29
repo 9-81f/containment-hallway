@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://squat25vhmb8"]
+
+[ext_resource type="Script" uid="uid://dkkbrp76wxy2l" path="res://game/components/inventory_component.gd" id="1_hvywq"]
+[ext_resource type="Theme" uid="uid://bmo7bfro3hthh" path="res://ui/themes/base_ui_theme.tres" id="2_3qp6u"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_72t3v"]
+device = -1
+keycode = 69
+unicode = 69
+
+[sub_resource type="Shortcut" id="Shortcut_3qp6u"]
+events = [SubResource("InputEventKey_72t3v")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_uf7oo"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_1kwp3"]
+events = [SubResource("InputEventKey_uf7oo")]
+
+[node name="InventoryComponent" type="Node2D"]
+script = ExtResource("1_hvywq")
+
+[node name="InventoryUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.11372549, 0.11372549, 0.5882353)
+
+[node name="CenterContainer" type="CenterContainer" parent="InventoryUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_3qp6u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryUI/CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryUI/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TabContainer" type="TabContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tab_alignment = 2
+current_tab = 0
+clip_tabs = false
+
+[node name="Consumables" type="MarginContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+metadata/_tab_index = 0
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/TabContainer/Consumables"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+columns = 4
+
+[node name="Weapons" type="MarginContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+metadata/_tab_index = 1
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/TabContainer/Weapons"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+columns = 4
+
+[node name="Key Items" type="MarginContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+metadata/_tab_index = 2
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/TabContainer/Key Items"]
+layout_mode = 2
+columns = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PaddingMDPanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+
+[node name="ItemDescription" type="RichTextLabel" parent="InventoryUI/CenterContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+fit_content = true
+
+[node name="InfoLabel" type="Label" parent="InventoryUI/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InfoTimer" type="Timer" parent="InventoryUI/CenterContainer/VBoxContainer"]
+wait_time = 3.0
+one_shot = true
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 3
+
+[node name="UseButton" type="Button" parent="InventoryUI/CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_3qp6u")
+text = "\"E\" Use"
+
+[node name="DropButton" type="Button" parent="InventoryUI/CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_1kwp3")
+text = "\"Q\" Drop"
+
+[node name="CloseButton" type="Button" parent="InventoryUI/CenterContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "\"I\" Close"

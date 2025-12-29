@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://m00nrjbewsbg"]
+
+[ext_resource type="Script" uid="uid://dhv8lh0q4lf0g" path="res://ui/menu/win_menu.gd" id="1_6cs7d"]
+[ext_resource type="Theme" uid="uid://bmo7bfro3hthh" path="res://ui/themes/base_ui_theme.tres" id="1_vrxxc"]
+[ext_resource type="AudioStream" uid="uid://bpkoqu1hre6ob" path="res://assets/audio/626536__josefpres__8-bit-game-loop-011-simple-mix-1-long-120-bpm.wav" id="3_e66j0"]
+
+[node name="WinMenu" type="CanvasLayer"]
+script = ExtResource("1_6cs7d")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vrxxc")
+theme_type_variation = &"PaddingMDPanelContainer"
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"H3"
+text = "CONGRATULATIONS!"
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Bodycopy"
+text = "You've survived & left this hell hole behind."
+horizontal_alignment = 1
+
+[node name="Replay" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"EmbossedButton"
+text = "Replay"
+
+[node name="BackToMainMenu" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"EmbossedButton"
+text = "Back to main menu"
+
+[node name="WinAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_e66j0")

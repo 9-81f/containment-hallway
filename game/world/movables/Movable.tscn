@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl365m8yf4a04"]
+
+[ext_resource type="Script" uid="uid://c5v8041unuto7" path="res://game/world/movables/movable.gd" id="1_g7ejp"]
+[ext_resource type="Texture2D" uid="uid://dther0h4sqrcb" path="res://assets/spritesheets/furnitures/box.png" id="2_g7ejp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taryu"]
+atlas = ExtResource("2_g7ejp")
+region = Rect2(24, 16, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwtos"]
+atlas = ExtResource("2_g7ejp")
+region = Rect2(24, 16, 16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tiwx"]
+size = Vector2(12.000015, 16.000027)
+
+[node name="Movable" type="CharacterBody2D"]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_g7ejp")
+texture = SubResource("AtlasTexture_taryu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_nwtos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.7881379e-07, 7.9999995)
+scale = Vector2(0.99999833, 0.99999833)
+shape = SubResource("RectangleShape2D_2tiwx")

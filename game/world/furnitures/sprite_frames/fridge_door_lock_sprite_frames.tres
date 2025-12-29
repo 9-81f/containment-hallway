@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bbwgiey8yda2y"]
+
+[ext_resource type="Texture2D" uid="uid://brjm7q03s0j65" path="res://assets/spritesheets/furnitures/fridge01-door.png" id="1_c6ype"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6ype"]
+atlas = ExtResource("1_c6ype")
+region = Rect2(0, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxlkr"]
+atlas = ExtResource("1_c6ype")
+region = Rect2(66, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ooe7"]
+atlas = ExtResource("1_c6ype")
+region = Rect2(132, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3opy7"]
+atlas = ExtResource("1_c6ype")
+region = Rect2(198, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r41l"]
+atlas = ExtResource("1_c6ype")
+region = Rect2(264, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khyec"]
+atlas = ExtResource("1_c6ype")
+region = Rect2(330, 0, 66, 66)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6ype")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxlkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ooe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3opy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r41l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khyec")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]

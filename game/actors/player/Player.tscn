@@ -1,0 +1,194 @@
+[gd_scene load_steps=18 format=3 uid="uid://bihueuap2oi8v"]
+
+[ext_resource type="Script" uid="uid://cvl1toj8hkt8p" path="res://game/actors/player/player_controller.gd" id="1_y54el"]
+[ext_resource type="Shader" uid="uid://beijt7yfnv5ri" path="res://core/shaders/hit_flash.tres" id="2_31vt5"]
+[ext_resource type="SpriteFrames" uid="uid://bma0voi2f0r1e" path="res://game/actors/player/resources/PlayerMovementSpriteFrames.tres" id="2_561fc"]
+[ext_resource type="PackedScene" uid="uid://csw1dlf18gahu" path="res://game/components/HealthComponent.tscn" id="3_dg8tp"]
+[ext_resource type="PackedScene" uid="uid://xtpbypvldiel" path="res://game/components/InteractionComponent.tscn" id="3_ipkx5"]
+[ext_resource type="PackedScene" uid="uid://squat25vhmb8" path="res://game/components/InventoryComponent.tscn" id="4_xe6r5"]
+[ext_resource type="PackedScene" uid="uid://cpg41l7lpmgtm" path="res://game/components/CombatComponent.tscn" id="6_qhmks"]
+[ext_resource type="Script" uid="uid://iolw8a100yua" path="res://game/components/player_camera.gd" id="7_byb6n"]
+[ext_resource type="AudioStream" uid="uid://c43audttls44e" path="res://assets/audio/680314__deltacode__heave.wav" id="8_p2gev"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p2gev"]
+resource_local_to_scene = true
+shader = ExtResource("2_31vt5")
+shader_parameter/enabled = false
+shader_parameter/Tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_byb6n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"f_melee"]
+}
+
+[sub_resource type="Animation" id="Animation_31vt5"]
+resource_name = "b_melee"
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"b_melee"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857146, 0.5714286, 0.71428573, 0.8571429),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_qhmks"]
+resource_name = "f_melee"
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"f_melee"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857143, 0.5714286, 0.71428573, 0.85714287),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_p2gev"]
+resource_name = "s_melee"
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857143, 0.5714286, 0.71428573, 0.85714287),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"s_melee"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2gev"]
+_data = {
+&"RESET": SubResource("Animation_byb6n"),
+&"b_melee": SubResource("Animation_31vt5"),
+&"f_melee": SubResource("Animation_qhmks"),
+&"s_melee": SubResource("Animation_p2gev")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhmks"]
+radius = 5.0115466
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_byb6n"]
+radius = 5.5
+height = 20.0
+
+[node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0.5, 0)
+motion_mode = 1
+script = ExtResource("1_y54el")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_p2gev")
+sprite_frames = ExtResource("2_561fc")
+animation = &"f_melee"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_p2gev")
+}
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 14.08)
+shape = SubResource("CircleShape2D_qhmks")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CapsuleShape2D_byb6n")
+
+[node name="HealthComponent" parent="." node_paths=PackedStringArray("owner_entity") instance=ExtResource("3_dg8tp")]
+position = Vector2(-0.5, -20)
+owner_entity = NodePath("..")
+max_health = 20
+
+[node name="InteractionComponent" parent="." node_paths=PackedStringArray("owner_entity") instance=ExtResource("3_ipkx5")]
+position = Vector2(-0.5, 0)
+owner_entity = NodePath("..")
+
+[node name="InventoryComponent" parent="." node_paths=PackedStringArray("owner_entity") instance=ExtResource("4_xe6r5")]
+owner_entity = NodePath("..")
+
+[node name="CombatComponent" parent="." node_paths=PackedStringArray("owner_entity") instance=ExtResource("6_qhmks")]
+owner_entity = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+script = ExtResource("7_byb6n")
+max_shake = 5.0
+shake_decay = 8.0
+
+[node name="HurtGruntAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_p2gev")

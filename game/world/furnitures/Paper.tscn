@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnl0g6fmy3tx7"]
+
+[ext_resource type="Script" uid="uid://bbuxhqhqvuud5" path="res://game/world/furnitures/paper.gd" id="1_bmmnu"]
+[ext_resource type="Texture2D" uid="uid://bsh5knohqyifw" path="res://assets/spritesheets/furnitures/furnish.png" id="1_k6q5m"]
+[ext_resource type="Theme" uid="uid://bmo7bfro3hthh" path="res://ui/themes/base_ui_theme.tres" id="3_q3mas"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmmnu"]
+atlas = ExtResource("1_k6q5m")
+region = Rect2(39, 19, 10, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3mas"]
+size = Vector2(8, 10)
+
+[node name="Paper" type="Node2D"]
+script = ExtResource("1_bmmnu")
+paper_text = "Bacon ipsum dolor amet hamburger beef ribs andouille short ribs tail pork belly shoulder. Rump boudin meatball frankfurter landjaeger corned beef. Meatloaf short ribs rump short loin sirloin pork kevin jerky pork loin prosciutto strip steak spare ribs. Ribeye jowl ham, bacon shank ball tip leberkas ham hock brisket cupim drumstick pork chop porchetta turkey chuck. Picanha ball tip frankfurter, turducken leberkas sausage flank alcatra capicola boudin brisket spare ribs pork. Biltong t-bone meatloaf flank, shankle turducken cow capicola spare ribs turkey porchetta.
+
+Ball tip meatball swine sausage andouille shoulder prosciutto short ribs biltong ham pork loin burgdoggen beef ribs chuck shank. Picanha turkey beef pig. Ham short loin shoulder short ribs tri-tip picanha filet mignon prosciutto. Ham hock sausage pork chop, swine kevin short loin kielbasa short ribs hamburger filet mignon chislic shoulder ribeye drumstick. Pig cow jerky, fatback tongue pork sausage bresaola venison sirloin chicken strip steak bacon frankfurter spare ribs."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_bmmnu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_q3mas")
+
+[node name="PaperUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PaperUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.57254905)
+
+[node name="CenterContainer" type="CenterContainer" parent="PaperUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_q3mas")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PaperUI/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="PaperUI/CenterContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_type_variation = &"PaperPanelContainer"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PaperUI/CenterContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Bacon ipsum dolor amet hamburger beef ribs andouille short ribs tail pork belly shoulder. Rump boudin meatball frankfurter landjaeger corned beef. Meatloaf short ribs rump short loin sirloin pork kevin jerky pork loin prosciutto strip steak spare ribs. Ribeye jowl ham, bacon shank ball tip leberkas ham hock brisket cupim drumstick pork chop porchetta turkey chuck. Picanha ball tip frankfurter, turducken leberkas sausage flank alcatra capicola boudin brisket spare ribs pork. Biltong t-bone meatloaf flank, shankle turducken cow capicola spare ribs turkey porchetta.
+
+Ball tip meatball swine sausage andouille shoulder prosciutto short ribs biltong ham pork loin burgdoggen beef ribs chuck shank. Picanha turkey beef pig. Ham short loin shoulder short ribs tri-tip picanha filet mignon prosciutto. Ham hock sausage pork chop, swine kevin short loin kielbasa short ribs hamburger filet mignon chislic shoulder ribeye drumstick. Pig cow jerky, fatback tongue pork sausage bresaola venison sirloin chicken strip steak bacon frankfurter spare ribs."
+
+[node name="CloseGuide" type="Label" parent="PaperUI/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press Esc /E to Close"
+horizontal_alignment = 1

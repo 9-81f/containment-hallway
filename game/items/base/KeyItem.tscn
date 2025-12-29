@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://qlk5tqhmantj"]
+
+[ext_resource type="PackedScene" uid="uid://cs2sa7vyiqtcv" path="res://game/items/base/BaseItem.tscn" id="1_gcb3a"]
+[ext_resource type="Script" uid="uid://cxqtetarehm2w" path="res://game/items/scripts/key_item.gd" id="2_e2ug0"]
+
+[node name="KeyItem" instance=ExtResource("1_gcb3a")]
+script = ExtResource("2_e2ug0")
+access_level = 1
+max_quantity = 1

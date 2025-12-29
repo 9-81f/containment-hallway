@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c18158ol6jrf8"]
+
+[ext_resource type="PackedScene" uid="uid://dl8r2toujp044" path="res://game/world/furnitures/Door.tscn" id="1_6mtx2"]
+[ext_resource type="SpriteFrames" uid="uid://cnkblon508c4p" path="res://game/world/furnitures/sprite_frames/door_sprite_frames.tres" id="2_yi35d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mtx2"]
+size = Vector2(32, 8)
+
+[node name="Door" instance=ExtResource("1_6mtx2")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_yi35d")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 21)
+shape = SubResource("RectangleShape2D_6mtx2")

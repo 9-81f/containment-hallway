@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://djoso8hp3k3j7"]
+
+[ext_resource type="Script" uid="uid://da6fo23rhmsr7" path="res://game/world/furnitures/computer.gd" id="1_r1n6h"]
+[ext_resource type="Texture2D" uid="uid://bsh5knohqyifw" path="res://assets/spritesheets/furnitures/furnish.png" id="1_wfslx"]
+[ext_resource type="PackedScene" uid="uid://defuum63k7lar" path="res://game/items/KeycardLv2.tscn" id="2_wrote"]
+[ext_resource type="Theme" uid="uid://bmo7bfro3hthh" path="res://ui/themes/base_ui_theme.tres" id="3_mwuvg"]
+[ext_resource type="PackedScene" uid="uid://db41vrsfobrtg" path="res://game/components/LockComponent.tscn" id="3_wrote"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prh8d"]
+atlas = ExtResource("1_wfslx")
+region = Rect2(20, 13, 16, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1n6h"]
+
+[node name="Computer" type="Node2D"]
+script = ExtResource("1_r1n6h")
+spawn_item = ExtResource("2_wrote")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_prh8d")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_r1n6h")
+
+[node name="LockComponent" parent="." instance=ExtResource("3_wrote")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+offset_bottom = -16.999985
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_mwuvg")
+theme_type_variation = &"HeaderMedium"

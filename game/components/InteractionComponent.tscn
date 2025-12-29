@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://xtpbypvldiel"]
+
+[ext_resource type="Script" uid="uid://2qt1k022kcg" path="res://game/components/interaction_component.gd" id="1_rsi2w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntec8"]
+size = Vector2(10, 27.497936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpjfr"]
+size = Vector2(10, 54.99996)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdc0f"]
+size = Vector2(10, 41.499954)
+
+[node name="InteractionComponent" type="Area2D"]
+script = ExtResource("1_rsi2w")
+
+[node name="FrontShape" type="CollisionShape2D" parent="."]
+position = Vector2(0.013864487, 22.751019)
+rotation = -0.002053686
+shape = SubResource("RectangleShape2D_ntec8")
+debug_color = Color(0, 0.64705884, 0.26666668, 0.41960785)
+
+[node name="BackShape" type="CollisionShape2D" parent="."]
+position = Vector2(0.014349784, -8.500032)
+rotation = -0.0015105077
+shape = SubResource("RectangleShape2D_cpjfr")
+debug_color = Color(3.1766297e-06, 0.64540035, 0.26752752, 0.41960785)
+
+[node name="LeftShape" type="CollisionShape2D" parent="."]
+position = Vector2(-15, 14)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tdc0f")
+debug_color = Color(0.99607843, 0, 0.23137255, 0.41960785)
+
+[node name="RightShape" type="CollisionShape2D" parent="."]
+position = Vector2(15.5, 14)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tdc0f")
+debug_color = Color(0.99436206, 0, 0.23057503, 0.41960785)

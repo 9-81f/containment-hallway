@@ -1,0 +1,38 @@
+{ "frames": {
+   "furnitures.aseprite": {
+    "frame": { "x": 1, "y": 1, "w": 112, "h": 80 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 16, "y": 0, "w": 112, "h": 80 },
+    "sourceSize": { "w": 128, "h": 128 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "furnish.png",
+  "format": "RGBA8888",
+  "size": { "w": 114, "h": 82 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "desk-h", "opacity": 255, "blendMode": "normal" },
+   { "name": "desk-v", "opacity": 255, "blendMode": "normal" },
+   { "name": "keyboard", "opacity": 255, "blendMode": "normal" },
+   { "name": "mouse", "opacity": 255, "blendMode": "normal" },
+   { "name": "PC", "opacity": 255, "blendMode": "normal" },
+   { "name": "paper", "opacity": 255, "blendMode": "normal" },
+   { "name": "health", "opacity": 255, "blendMode": "normal" },
+   { "name": "sanity", "opacity": 255, "blendMode": "normal" },
+   { "name": "fridge-01" },
+   { "name": "inner", "group": "fridge-01", "opacity": 255, "blendMode": "normal" },
+   { "name": "top", "group": "fridge-01", "opacity": 255, "blendMode": "normal" },
+   { "name": "access-card-lv1", "opacity": 255, "blendMode": "normal" },
+   { "name": "access-card-lv2", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -14,6 +14,7 @@ enum KeyTypes {
 @onready var buttons: Array[Node] = $CenterContainer/PanelContainer/VBoxContainer/GridContainer.get_children()
 @onready var input_label: Label = $CenterContainer/PanelContainer/VBoxContainer/Label
 @onready var message_box: Label = $MessageBox
+@onready var close_btn: Button = $CenterContainer/PanelContainer/VBoxContainer/Close
 
 const MAX_LENGTH := 6
 const WAIT_TIME := 1.5
@@ -41,6 +42,11 @@ func _ready() -> void:
 				button.pressed.connect(_on_enter_pressed)
 			else:
 				button.pressed.connect(_on_numpad_pressed.bind(button.name))
+				
+	close_btn.pressed.connect(
+		func():
+			hide_passcode_ui()
+	)
 	
 func _process(_delta: float) -> void:
 	if !enabled: return

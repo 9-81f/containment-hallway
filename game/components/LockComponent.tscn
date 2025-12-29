@@ -16,7 +16,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -96,6 +95,10 @@ text = "0"
 [node name="Enter" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Ent"
+
+[node name="Close" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Close"
 
 [node name="MessageBox" type="Label" parent="."]
 visible = false

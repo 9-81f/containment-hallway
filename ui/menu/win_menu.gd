@@ -7,6 +7,8 @@ class_name WinMenu extends CanvasLayer
 func _ready() -> void:
 	win_audio.play()
 	
+	replay_btn.grab_focus()
+	
 	replay_btn.pressed.connect(
 		func():
 			get_tree().change_scene_to_file("res://main/Main.tscn")
@@ -17,4 +19,3 @@ func _ready() -> void:
 			get_tree().change_scene_to_file("res://ui/menu/MainMenu.tscn")
 	)
 	
-	replay_btn.grab_focus()

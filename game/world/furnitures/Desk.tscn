@@ -29,13 +29,13 @@ shape = SubResource("RectangleShape2D_alegr")
 
 [node name="Paper" parent="ItemContainer" instance=ExtResource("3_se0b3")]
 position = Vector2(11, -4)
-paper_text = "To whomever actually get to this contained hallway. Here I present you with a keycard level 1 to open some medicine fridges and use the computer in the middle room to print keycard level 2 to enable you to get out of these hell hole.
+paper_text = "To whomever actually get to this cursed contained hallway. On the left from this note, there's a keycard level 1. This card will open the door and enable  the computer in the middle room to print keycard level 2. That level 2 keycard is the only key item you need to open this hallway exit door.
 
-Use that bat to swat all of the monsters contained in this floor.
+Use that bat just up from this message to swat all of the monsters contained in this floor.
 
 Good luck...
 
-P.S: Can't guarantee medicine fridges will have any medicine left. Sorry"
+P.S: Can't guarantee medicine fridge will have any medicine inside . Sorry..."
 
 [node name="Keycard" parent="ItemContainer" instance=ExtResource("4_tofyw")]
 position = Vector2(-10, -5)

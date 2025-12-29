@@ -19,3 +19,8 @@ res://ui/menu/GameOver.tscn
 res://ui/menu/game_over.gd
 res://game/actors/player/Player.tscn
 res://game/actors/player/player_controller.gd
+res://game/world/furnitures/Desk.tscn
+res://game/world/furnitures/Desk2.tscn
+res://game/components/LockComponent.tscn
+res://game/components/lock_component.gd
+res://ui/themes/base_embossed_button.tres

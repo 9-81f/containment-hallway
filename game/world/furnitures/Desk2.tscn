@@ -31,7 +31,11 @@ position = Vector2(11, -4)
 paper_text = "—X—
 X—X
 XX—
-—X—"
+—X—
+
+To: weird topless dude
+
+If you ever find this note. Aren't you cold?"
 
 [node name="Computer" parent="ItemContainer" instance=ExtResource("4_5qoss")]
 position = Vector2(-7, -13)

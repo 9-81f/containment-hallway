@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1767021070
-export_presets.cfg::TextFile::-1::1767021070::0::1::::<><><>0<>0<><>::
+::res://::1767065733
+export_presets.cfg::TextFile::-1::1767024548::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::204346633098437614::1766375729::1766375729::1::::<><><>0<>0<>46e412c0aa50f4ab00864c63c89c81f7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1766560650
-::res://assets/audio/::1767023213
+::res://assets/audio/::1767023233
 21583__djgriffin__beast-stab-d.wav::AudioStreamWAV::8956444988942684181::1766415617::1766415618::1::::<><><>0<>0<>a8ab08f63cad53a2ff7417674c005649<>res://.godot/imported/21583__djgriffin__beast-stab-d.wav-35ec9919f7873d398923d367d6ab8e35.sample::
 82515__ifartinurgeneraldirection__nuclear_alarm.ogg::AudioStreamOggVorbis::4420071219468447152::1766811420::1766811420::1::::<><><>0<>0<>02285bdf84ea030946e059e9976062cd<>res://.godot/imported/82515__ifartinurgeneraldirection__nuclear_alarm.ogg-e36e69f2532533bcd8b5259ca6e9595d.oggvorbisstr::
 87572__huluvu42__platzender-kopf_nachschlag.wav::AudioStreamWAV::8062520210770121621::1766375729::1766375729::1::::<><><>0<>0<>edd10f7cc080fb2893fcd44628f1971d<>res://.godot/imported/87572__huluvu42__platzender-kopf_nachschlag.wav-c0f2ef0bb5d6e972987e61868de25c42.sample::
@@ -119,11 +119,13 @@ s_walk.json::JSON::-1::1766375729::0::1::::<><><>0<>0<><>::
 s_walk.png::CompressedTexture2D::5970110482369995768::1766375729::1766375729::1::::<><><>0<>0<>15ab0a1986e5304e561e10c00d68513e<>res://.godot/imported/s_walk.png-96717bdb17342482819a6abbf95dced3.ctex::
 ::res://assets/tiles/::1766586476
 wall-tiles.png::CompressedTexture2D::4776436425809597889::1766586476::1766586476::1::::<><><>0<>0<>2e440cece7bfb9a6bd3013c37e1b67a2<>res://.godot/imported/wall-tiles.png-6dbf15328089ac414368f4d52af247b9.ctex::
-::res://builds/::1767021053
-::res://builds/web/::1767021211
-index.apple-touch-icon.png::CompressedTexture2D::4394388999212234935::1767021069::1767021211::1::::<><><>0<>0<>5160ccad691053696b8b325cdb02ea07<>res://.godot/imported/index.apple-touch-icon.png-829bd6566b1ab329ce6e0fe101c50e36.ctex::
-index.icon.png::CompressedTexture2D::3883330054149572655::1767021069::1767021211::1::::<><><>0<>0<>8591c1dd6805dda909f177bbd8b5e47d<>res://.godot/imported/index.icon.png-1d537cdb021c40f184d1277d96fd0f0f.ctex::
-index.png::CompressedTexture2D::1926476804914738243::1767021069::1767021211::1::::<><><>0<>0<>c81a5b13305bea159678d6d78f7fef8d<>res://.godot/imported/index.png-2770f543c84e6b55d99f3bb624b49866.ctex::
+::res://builds/::1767076647
+::res://builds/cover/::1767076729
+itch_io_cover.jpg::CompressedTexture2D::5067996345040050878::1767076729::1767080127::1::::<><><>0<>0<>414d4154b23aae757ea343876c24dd05<>res://.godot/imported/itch_io_cover.jpg-9c12d7f8e5cbf6c7183ae2b893380d17.ctex::
+::res://builds/web/::1767024547
+index.apple-touch-icon.png::CompressedTexture2D::4394388999212234935::1767024547::1767021211::1::::<><><>0<>0<>5160ccad691053696b8b325cdb02ea07<>res://.godot/imported/index.apple-touch-icon.png-829bd6566b1ab329ce6e0fe101c50e36.ctex::
+index.icon.png::CompressedTexture2D::3883330054149572655::1767024547::1767021211::1::::<><><>0<>0<>8591c1dd6805dda909f177bbd8b5e47d<>res://.godot/imported/index.icon.png-1d537cdb021c40f184d1277d96fd0f0f.ctex::
+index.png::CompressedTexture2D::1926476804914738243::1767024547::1767021211::1::::<><><>0<>0<>c81a5b13305bea159678d6d78f7fef8d<>res://.godot/imported/index.png-2770f543c84e6b55d99f3bb624b49866.ctex::
 ::res://core/::1767021048
 ::res://core/base/::1766734689
 base_interactable.gd::GDScript::8709211736590096899::1766734689::0::1::::BaseInteractable<>Node2D<><>1<>0<><>::
@@ -217,15 +219,15 @@ sine_modulate.gd::GDScript::2687188176342238531::1766809603::0::1::::<>CanvasMod
 ::res://ui/debug overlay/::1766375729
 DebugOverlay.tscn::PackedScene::7689918974238375711::1766375729::0::1::::<><><>0<>0<><>::uid://w6rk10nk2t7r::::res://ui/debug overlay/debug_overlay.gd
 debug_overlay.gd::GDScript::1609201722060966645::1766375729::0::1::::DebugOverlay<>CanvasLayer<><>0<>0<><>::
-::res://ui/menu/::1767022983
-MainMenu.tscn::PackedScene::7463060954197569921::1767022983::0::1::::<><><>0<>0<><>::uid://duh3ibwtiew4q::::res://ui/menu/main_menu.gd<>uid://bmo7bfro3hthh::::res://ui/themes/base_ui_theme.tres<>uid://c34gbrrnya003::::res://assets/audio/265308__volvion__8-bit-bossfight.mp3
-main_menu.gd::GDScript::8579204017650264130::1766992475::0::1::::MainMenu<>CanvasLayer<><>0<>0<><>::
-GameOver.tscn::PackedScene::6745598077589322913::1767021287::0::1::::<><><>0<>0<><>::uid://bmo7bfro3hthh::::res://ui/themes/base_ui_theme.tres<>uid://lj7f2d6yp0l8::::res://ui/menu/game_over.gd<>uid://dmr8oyyqbhx0f::::res://assets/audio/horror-ambience-4-303645.mp3
+::res://ui/menu/::1767024531
+GameOver.tscn::PackedScene::6745598077589322913::1767024099::0::1::::<><><>0<>0<><>::uid://bmo7bfro3hthh::::res://ui/themes/base_ui_theme.tres<>uid://lj7f2d6yp0l8::::res://ui/menu/game_over.gd<>uid://cyto1mq8f3wvh::::res://assets/audio/712671__lonerdroner__something-from-almost-nothing.wav
 game_over.gd::GDScript::792609976749001747::1767000690::0::1::::GameOverMenu<>CanvasLayer<><>0<>0<><>::
-win_menu.gd::GDScript::7695959600924753236::1767019419::0::1::::WinMenu<>CanvasLayer<><>0<>0<><>::
+MainMenu.tscn::PackedScene::7463060954197569921::1767024531::0::1::::<><><>0<>0<><>::uid://duh3ibwtiew4q::::res://ui/menu/main_menu.gd<>uid://bmo7bfro3hthh::::res://ui/themes/base_ui_theme.tres<>uid://c34gbrrnya003::::res://assets/audio/265308__volvion__8-bit-bossfight.mp3
+main_menu.gd::GDScript::8579204017650264130::1766992475::0::1::::MainMenu<>CanvasLayer<><>0<>0<><>::
 WinMenu.tscn::PackedScene::895417614499666752::1766997757::0::1::::<><><>0<>0<><>::uid://dhv8lh0q4lf0g::::res://ui/menu/win_menu.gd<>uid://bmo7bfro3hthh::::res://ui/themes/base_ui_theme.tres<>uid://bpkoqu1hre6ob::::res://assets/audio/626536__josefpres__8-bit-game-loop-011-simple-mix-1-long-120-bpm.wav
-::res://ui/themes/::1767020822
+win_menu.gd::GDScript::7695959600924753236::1767019419::0::1::::WinMenu<>CanvasLayer<><>0<>0<><>::
+::res://ui/themes/::1767024201
 base_embossed_button.tres::StyleBoxFlat::5641904710299816027::1767020684::0::1::::<><><>0<>0<><>::
-base_ui_theme.tres::Theme::3259533115020994745::1766996633::0::1::::<><><>0<>0<><>::uid://cyb20c7002u7m::::res://assets/fonts/Kenney Mini.ttf<>uid://d0p85v3b2mjwi::::res://ui/themes/embossed_button_hover.tres<>uid://cmm8l1korhu5h::::res://ui/themes/base_embossed_button.tres<>uid://do4edxpv88cyt::::res://ui/themes/embossed_button_pressed.tres
-embossed_button_hover.tres::StyleBoxFlat::8947007189246325576::1767020686::0::1::::<><><>0<>0<><>::
-embossed_button_pressed.tres::StyleBoxFlat::8202022274440933315::1767020822::0::1::::<><><>0<>0<><>::
+base_ui_theme.tres::Theme::3259533115020994745::1767023784::0::1::::<><><>0<>0<><>::uid://cyb20c7002u7m::::res://assets/fonts/Kenney Mini.ttf<>uid://d0p85v3b2mjwi::::res://ui/themes/embossed_button_hover.tres<>uid://cmm8l1korhu5h::::res://ui/themes/base_embossed_button.tres<>uid://do4edxpv88cyt::::res://ui/themes/embossed_button_pressed.tres
+embossed_button_hover.tres::StyleBoxFlat::8947007189246325576::1767024099::0::1::::<><><>0<>0<><>::
+embossed_button_pressed.tres::StyleBoxFlat::8202022274440933315::1767024201::0::1::::<><><>0<>0<><>::
